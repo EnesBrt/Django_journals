@@ -195,6 +195,84 @@
             }
         }
 
+        /* Styles CSS pour le footer */
+
+        footer {
+            background-color: #2c2c2c; /* Couleur de fond du footer gris foncé */
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-column {
+            padding: 20px;
+        }
+
+        .footer-title {
+            color: white; /* Couleur des titres des listes blanc */
+            font-weight: bold; /* Titres des listes en gras */
+            margin-bottom: 15px;
+        }
+
+        .footer-column .nav-link {
+            color: #d3d3d3 !important; /* Couleur des liens gris clair */
+            text-decoration: none; /* Supprime le soulignement des liens */
+            transition: color 0.3s, text-shadow 0.3s; /* Transition de couleur et de text-shadow au survol */
+        }
+
+        .footer-column .nav-link:hover {
+            color: #ffffff !important; /* Couleur des liens au survol blanc */
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff; /* Effet de brillance au survol */
+        }
+
+        /* Styles pour les icônes de médias sociaux */
+        .social-buttons .fab {
+            font-size: 18px;
+            color: #d9d9d9;
+            transition: color 0.3s;
+        }
+
+        .social-buttons .fab:hover {
+            color: white;
+        }
+
+        /* Styles pour les liens rapides */
+        .quick-links a {
+            color: #d9d9d9;
+            transition: color 0.3s;
+        }
+
+        .quick-links a:hover {
+            color: white;
+        }
+
+        /* Couleur de copyright en blanc */
+        .copyright {
+            color: white;
+        }
+
+        /* Ajout de la transition pour la couleur de fond du footer */
+        footer {
+            transition: background-color 0.3s;
+        }
+
+        /* Modification de la couleur de fond du footer en mode sombre */
+        body.dark footer {
+            background-color: #1f2029;
+        }
+
+        /* Suppression des barres violettes au survol dans le footer */
+        footer .nav-item:after,
+        footer .nav-item:hover:after {
+            display: none;
+        }
+
+        /* Suppression de l'effet de couleur violet au survol */
+        .nav-item:hover .nav-link {
+            color: #d3d3d3 !important; /* Maintient la couleur gris clair au survol */
+        }
+
 
     </style>
 </head>
@@ -223,7 +301,7 @@
             </div>
         </div>
     </div>
-
+      
     <!-- Votre contenu ici -->
 
     <!-- jQuery et Bootstrap JS -->
@@ -270,6 +348,88 @@
          })(jQuery);
 
     </script>
+
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-column">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <span class="footer-title">Liens</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Agency</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Journal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 footer-column">
+          <!-- Colonne supprimée comme demandé -->
+        </div>
+        <div class="col-md-4 footer-column">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <span class="footer-title">Contact & Support</span>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+      
+      <div class="row text-center">
+        <div class="col-md-4 box">
+          <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
+          </span>
+        </div>
+        <div class="col-md-4 box">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Liste des articles</title>
-</head>
-<body>
-    <h1>Liste des articles</h1>
-    <ul>
-        {% for article in articles %}
-            <li><a href="{% url 'article_detail' article_slug=article.slug %}">{{ article.headline }}</a></li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+
+{% block content %}
+    <h1>Articles</h1>
+    <div>
+        <ul>
+            {% for article in articles %}
+                <li><a href="{% url 'article_detail' article_slug=article.slug %}">{{ article.headline }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

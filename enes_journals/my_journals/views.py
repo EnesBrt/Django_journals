@@ -3,7 +3,7 @@ from .models import Articles
 from django.shortcuts import get_object_or_404
 
 def home_view(request):
-    return render(request, 'home.html', {'home': 'Hello'})
+    return render(request, 'home.html')
 
 def list_articles(request):
     articles = Articles.objects.all()

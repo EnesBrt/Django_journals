@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"></script>
     <title>Journals</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -274,7 +275,7 @@
         }
 
         main {
-            margin-top: 100px; /* Ajustez cette valeur pour ajouter plus d'espace sous la navbar */
+            margin-top: 160px; /* Ajustez cette valeur pour ajouter plus d'espace sous la navbar */
             margin-bottom: 100px; /* Ajustez cette valeur pour ajouter plus d'espace au-dessus du footer */
         }
 
@@ -298,17 +299,12 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="#" target="_blank">My journal</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <a class="navbar-brand" href="{% url 'home' %}">My journal</a>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto py-4 py-md-0">
-                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
-                                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                                </li>
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'list_articles' %}">Articles</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -378,22 +374,10 @@
               <span class="footer-title">Liens</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Agency</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Journal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="{% url 'list_articles' %}">Articles</a>
             </li>
           </ul>
         </div>
@@ -403,19 +387,16 @@
         <div class="col-md-4 footer-column">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <span class="footer-title">Contact & Support</span>
+              <span class="footer-title">Contact</span>
             </li>
             <li class="nav-item">
               <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
+              <a class="nav-link" href="#"><i class="fas fa-comments">enes.barut@gmx.com</i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+              <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact</a>
             </li>
           </ul>
         </div>
@@ -424,10 +405,6 @@
       <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
       
       <div class="row text-center">
-        <div class="col-md-4 box">
-          <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
-          </span>
-        </div>
         <div class="col-md-4 box">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">

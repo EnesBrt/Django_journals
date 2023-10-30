@@ -1,26 +1,26 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <!-- Landing Page -->
+<img src="{% static 'white-seamless-background-asian-style-wallpaper-your-design-decoration_290875-227.jpg' %}" style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; z-index: -1;" alt="Background Image">
 <section id="landing" class="row">  <!-- Ajout de la classe row -->
-  <div class="page-heading col-md-6">  <!-- Ajout de la classe col-md-6 -->
-    <h2>Going around the world</h2>
-    <p>Since 1996 <i class="fa fa-globe-asia"></i></p>
-    <p>lalalalalalalalalalalalalaalalalalalalalalalalalalala</p>
-
-    <form action="#">
-      <a href="#" class="btn">Learn More</a>
-      <a href="#" class="btn">Subscribe</a>
-      <input type="email" placeholder="Email Address">
-    </form>
+  <div class="page-heading col-md-6 d-flex flex-column justify-content-center align-items-center">  <!-- Ajout des classes d-flex, flex-column, justify-content-center et align-items-center -->
+    <h1>Le monde de la tech c'est mon dada !</h1>
+    <br>
+    <strong>Hello ! Moi c'est Enes,  je suis dev Backend.<i class="fa fa-globe-asia"></i></strong>
+    <br>
+    <strong>J'écris des articles et mes pensées sur l'actu de la tech.</strong>
+    <br>
+    <a href="{% url 'list_articles' %}" class="btn btn-primary mt-3">Clique ici !</a>  <!-- Bouton ajouté -->
   </div>
   
-  <div class="page-img col-md-6">  <!-- Ajout de la classe col-md-6 -->
-    <img src="https://source.unsplash.com/250x250/?nature,water" alt="">
-    <img src="https://source.unsplash.com/250x250/?camping" alt="">
-    <img src="https://source.unsplash.com/250x250/?hiking" alt="">
-    <img src="https://source.unsplash.com/250x250/?travel" alt="">
+  <div class="page-img col-md-6 d-flex justify-content-around flex-wrap">  <!-- Ajout des classes d-flex, justify-content-around et flex-wrap -->
+    <img src="https://source.unsplash.com/250x250/?coding" alt="" class="rounded mr-3 mb-3">  <!-- Ajout des classes rounded, mr-3 et mb-3 -->
+    <img src="https://source.unsplash.com/250x250/?developer" alt="" class="rounded mr-3 mb-3">  <!-- Ajout des classes rounded, mr-3 et mb-3 -->
+    <img src="https://source.unsplash.com/250x250/?coffee cup desk" alt="" class="rounded mr-3 mb-3">  <!-- Ajout des classes rounded, mr-3 et mb-3 -->
+    <img src="https://source.unsplash.com/250x250/?uml diagram" alt="" class="rounded mr-3 mb-3">  <!-- Ajout des classes rounded, mr-3 et mb-3 -->
   </div>
 </section>
 {% endblock %}
-

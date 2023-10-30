@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h1 class="text-center">{{ article.headline }}</h1>
     <div>{{ article.content|safe }}</div>
 {% endblock %}

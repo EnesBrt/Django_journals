@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Articles</h1>
-    <div>
-        <ul>
-            {% for article in articles %}
-                <li><a href="{% url 'article_detail' article_slug=article.slug %}">{{ article.headline }}</a></li>
-            {% endfor %}
-        </ul>
+    <div class="row">  <!-- Ajout de la classe row pour aligner les cartes -->
+        {% for article in articles %}
+            <div class="col-md-4 mb-4">  <!-- Ajout de la classe col-md-4 pour définir la largeur des cartes et mb-4 pour ajouter de l'espace entre les cartes -->
+                <div class="card">  <!-- Début de la carte Bootstrap -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{ article.headline }}</h5>
+                        <p class="card-text" id="summary-{{ forloop.counter }}"></p>  <!-- Element où le résumé sera inséré -->
+                        <a href="{% url 'article_detail' article_slug=article.slug %}" class="btn btn-primary">Lire l'article</a>
+                    </div>
+                </div>  <!-- Fin de la carte Bootstrap -->
+            </div>
+            <script>
+                // Récupération du contenu HTML brut
+                var rawHtml = "{{ article.content|truncatechars:300|escapejs }}";
+                
+                // Nettoyage du HTML avec DOMPurify
+                var cleanHtml = DOMPurify.sanitize(rawHtml, {ALLOWED_TAGS: []});
+                
+                // Insertion du HTML nettoyé dans l'élément
+                document.getElementById('summary-{{ forloop.counter }}').innerHTML = cleanHtml;
+            </script>
+        {% endfor %}
     </div>
 {% endblock %}

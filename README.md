@@ -52,7 +52,7 @@ Pour configurer la fonctionnalité d'envoi d'email, vous devez définir les para
 
 N'oubliez pas de remplacer ces valeurs par vos informations personnelles pour que la fonctionnalité de messagerie fonctionne correctement.
 
-## ScreenShots
+## Screenshots
 
 ![](https://raw.githubusercontent.com/EnesBrt/Django_journals/main/Pictures/Capture%20d’écran%202023-10-31%20à%2012.27.18.png)
 ![](https://raw.githubusercontent.com/EnesBrt/Django_journals/main/Pictures/Capture%20d’écran%202023-10-31%20à%2012.27.33.png)

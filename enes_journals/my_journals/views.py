@@ -33,7 +33,7 @@ def contact(request):
                 fail_silently=False,
             )
             success_msg = "Merci ! Votre message a bien été envoyé."
-            form = ContactForm()  # Reset the form on success
+            form = ContactForm() 
     else:
         form = ContactForm()
 

@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="row">  <!-- Ajout de la classe row pour aligner les cartes -->
+    <div class="row">  
         {% for article in articles %}
-            <div class="col-md-4 mb-4">  <!-- Ajout de la classe col-md-4 pour définir la largeur des cartes et mb-4 pour ajouter de l'espace entre les cartes -->
-                <div class="card">  <!-- Début de la carte Bootstrap -->
+            <div class="col-md-4 mb-4"> 
+                <div class="card">  
                     <div class="card-body">
                         <h5 class="card-title">{{ article.headline }}</h5>
                         <p class="card-text" id="summary-{{ forloop.counter }}"></p>  <!-- Element où le résumé sera inséré -->
                         <a href="{% url 'article_detail' article_slug=article.slug %}" class="btn btn-primary">Lire l'article</a>
                     </div>
-                </div>  <!-- Fin de la carte Bootstrap -->
+                </div>  
             </div>
             <script>
                 // Récupération du contenu HTML brut

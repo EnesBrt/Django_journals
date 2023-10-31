@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Articles
+from my_journals.models import Articles  # Remplacez par le chemin d'importation absolu
 from django.utils import timezone
 
 class ArticlesModelTest(TestCase):

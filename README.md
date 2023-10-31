@@ -7,7 +7,6 @@ Django_journals est un blog personnel développé en utilisant le framework Djan
 ## Fonctionnalités Principales
 - **Blog Personnel**: Un espace pour publier et gérer des articles de blog.
 - **Formulaire de Contact**: Une fonctionnalité récemment ajoutée pour permettre aux visiteurs de prendre contact.
-- **Responsive Design**: Un design qui s'adapte à tous les appareils pour une expérience utilisateur optimale.
 
 ## Installation
 Pour installer et configurer ce projet, suivez les étapes ci-dessous :

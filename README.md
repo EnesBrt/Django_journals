@@ -39,7 +39,7 @@ Pour lancer le projet, suivez ces étapes :
    ```
 
 ## Introduction aux Paramètres des Fonctionnalités Principales
-Dans `settings.py`, vous trouverez toutes les configurations nécessaires pour personnaliser les fonctionnalités principales du blog, telles que les paramètres de la base de données, la configuration des utilisateurs et les réglages du formulaire de contact.
+Dans `settings.py`, vous trouverez toutes les configurations nécessaires pour personnaliser les fonctionnalités principales du blog, telles que les paramètres de la base de données et les réglages du formulaire de contact.
 
 ## Fonctionnalité Email
 Pour configurer la fonctionnalité d'envoi d'email, vous devez définir les paramètres suivants dans `settings.py` :

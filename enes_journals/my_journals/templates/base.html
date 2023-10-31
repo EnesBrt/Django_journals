@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -292,7 +292,7 @@
 
     </style>
 </head>
-<body class="hero-anime">
+<body class="hero-anime" data-theme="light">
 
     <div class="navigation-wrap bg-light start-header start-style">
         <div class="container">
@@ -305,6 +305,8 @@
                                 <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                     <a class="nav-link" href="{% url 'list_articles' %}">Articles</a>
                                 </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> 
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                             </ul>
                         </div>
                     </nav>
@@ -374,10 +376,10 @@
               <span class="footer-title">Liens</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'list_articles' %}">Articles</a>
+                <a class="nav-link" href="{% url 'list_articles' %}">Articles</a>
             </li>
           </ul>
         </div>
@@ -390,13 +392,13 @@
               <span class="footer-title">Contact</span>
             </li>
             <li class="nav-item">
-              <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+              <span class="nav-link"><i class="fas fa-phone"></i>+XX XX XX XX XX</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-comments">enes.barut@gmx.com</i></a>
+              <a class="nav-link"><i class="fas fa-email">enes.barut@gmx.com</i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact</a>
+              <a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope"></i>Clique ici pour me contacter !</a>
             </li>
           </ul>
         </div>

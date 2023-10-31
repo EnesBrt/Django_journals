@@ -6,4 +6,3 @@ class ContactForm(forms.Form):
     message = forms.CharField(label='Message', widget=forms.Textarea)
     
     
-    
